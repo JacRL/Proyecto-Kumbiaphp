@@ -1,0 +1,35 @@
+<h1>Modificar libros: <?= $libro->titulo ?> </h1>
+<br>
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">Titulo:</label>
+        <?= Form::text('libro.titulo', array("class" => "form-control") ) ?>
+    </div>
+    <!-- Paginas  -->
+    <div class="mb-3">
+        <label class="form-label">Paginas:</label>
+        <?= Form::text('libro.paginas', array("class" => "form-control") ) ?>
+    </div>
+    <!-- Categoria  -->
+    <div class="mb-3">
+        <label class="form-label">Categoria:</label>
+        <?= Form::text('libro.categoria', array("class" => "form-control") ) ?>
+    </div>
+    <!-- Autor  -->
+    <div class="mb-3">
+        <label class="form-label">Autor:</label>
+        <?= Form::text('libro.autor', array("class" => "form-control") ) ?>
+    </div>
+    <!-- Editorial  -->
+    <div class="mb-3">
+        <label class="form-label">Editorial:</label>
+        <?= Form::text('libro.editorial', array("class" => "form-control") ) ?>
+    </div>
+    <!-- Año  -->
+    <div class="mb-3">
+        <label class="form-label">Año:</label>
+        <?= Form::text('libro.anio', array("class" => "form-control") ) ?>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

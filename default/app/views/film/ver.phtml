@@ -1,0 +1,151 @@
+<style>
+    section {
+        display: flex;
+        width: 980px;
+        height: 290px;
+    }
+    section img{
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+    }
+    section img:hover{
+        cursor: crosshair;
+        width: 250px;
+        opacity: 1;
+        filter: contrast(120%);
+    }
+    .bg-custom {
+        background-color: #191A20;
+    }
+    .text-custom {
+        color: #313442;
+    }
+    .list-custom {
+        background-color: #313442;
+        color: #fff; /* opcional: para establecer el color del texto en blanco */
+    }
+</style>
+
+<br><body class="bg-custom">
+
+
+<div class="container" >
+    <div class="col-12">
+        <section>
+            <img src="https://images.firstpost.com/wp-content/uploads/2017/09/it.jpg";">
+            <img src="https://www.movieberry.com/static/photos/652/65_midi.jpg" ;">
+            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/annabelle-vuelve-a-casa-1562910689.jpg" ;">
+            <img src="https://cdn.britannica.com/60/182360-050-CD8878D6/Avengers-Age-of-Ultron-Joss-Whedon.jpg" ;">
+            <img src="https://cadenaser.com/resizer/iatR2SLB_dmzwng71nK_LyZj71Y=/1200x1200/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/OZRTFH56RRB27N5BYZX56WPERU.jpg" ;">
+            <img src="https://www.mdtech.news/u/fotografias/m/2023/4/10/f608x342-19447_49170_0.jpg" ;">
+            <img src="https://www.lavoz.com.ar/resizer/FYICtqxe-md9I9sEly-wvd9Dp58=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/7WH3KSF5VZEF5FJFBYUVYT23MM.jpg" ;">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/kissing-booth-3-073119-mc-0233-cr-1628010248.jpg" ;">
+            <img src="http://images2.fanpop.com/image/photos/12400000/Spirit-Stallion-of-the-Cimarron-spirit-stallion-of-the-cimarron-12421822-1280-960.jpg";">
+        </section>
+    </div>
+
+    <?php foreach ($film as $f):?>
+        <div class="row" >
+            <!--<div class="col-4"><h1>FILM:</h1></div>-->
+            <div class="col-12 text-center">
+                <h1 class="display-1 text-custom">
+                    <i><?=$film[0]->title?></i>
+                </h1>
+            </div>
+
+        </div>
+        
+    <?php endforeach; ?>
+        <br>
+        <div class="row" >
+            <div class="col-12" >
+                <ul class="list-group" >
+                    
+    <?php foreach ($film as $f):?>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA; color: #FFFFFF"><b>BASIC INFORMATION</b></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;">TITLE:<b><?= $f->title?></b></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;">DESCRIPTION:<b><?= $f->description?></b></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;">RELEASE YEAR:<b><?= $f->release_year?></b></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;">LANGUAJE:<b>English</b></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;">DURATION:<b>96 MINUTES</b></li>
+                </ul>
+                
+    <?php endforeach; ?>
+            </div>
+
+
+        </div>
+        <BR>
+        <div class="row">
+            <div class="col-6" >
+            <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA"><b>CAST OF MOVIE</b></li>
+                        <?php foreach ($actoresMov as $am): ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;" >Actor's Name: <?= $am->complete_name?></li>
+                        <?php endforeach; ?> 
+                </ul>
+            </div>
+                <br>
+                <div class="col-6">
+                    <ul class="list-group" >
+                        <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA"><BR><B>OTHER FEATURES</B><BR></li>
+                        <?php foreach ($actspec as $ad): ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;" >Special features: <?= $ad?></li>
+                        <?php endforeach; ?> 
+                        <?php foreach ($actcat as $cat): ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;" >Category: <?= $cat?></li>
+                        <?php endforeach; ?> 
+                        <?php foreach ($actcla as $cla): ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;" >Rating: <?= $cla?></li>
+                        <?php endforeach; ?> 
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+
+            </div>
+            <br>
+<li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA">
+    <h6 class="mx-auto text-center" ><strong>RENTAL INCOME</strong></h6>
+  </li>
+    <div class="row">
+        <div class="col mx-0">
+            <ul class="list-group w-auto py-0">
+                <li li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;"><b>Veces rentado</b></li>
+                <?php foreach ($actrent as $ar): ?>
+                    <?php if ($ar != null): ?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-0"><?= $ar?></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="col mx-0">
+            <ul class="list-group w-auto py-0">
+                <li li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;"><b>Mes mas solicitado: </b></li>
+                <?php foreach ($actmount as $am): ?>
+                    <?php if ($am != null): ?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-0"><?= $am->month ?></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="col mx-0">
+            <ul class="list-group w-auto py-0">
+                <li li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #D6D6D6;"><b>Veces por mes mas solicitado:</b></li>
+                <?php foreach ($actmount as $acm): ?>
+                    <?php if ($acm != null): ?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-0"><?= $acm->num_rentals ?></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+</div><!-- DIV FINAL -->
+<br>
+<br>

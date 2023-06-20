@@ -1,0 +1,50 @@
+<h1>Registro de direcciones: </h1>
+<?php View::content() ?>
+<center>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">ID CLIENTE:</label>
+            <input type="number" class="form-control"   name="address[customer_id]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DIRECCION 1:</label>
+            <input type="text" class="form-control" name="address[address1]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DIRECCION 2:</label>
+            <input type="text" class="form-control"   name="address[address2]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DISTRITO:</label>
+            <input type="text" class="form-control" name="address[district]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">ID CIUDAD:</label>
+            <input type="number" class="form-control"   name="address[city_id]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">CODIGO POSTAL:</label>
+            <input type="number" class="form-control" name="address[postal_code]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">TELEFONO:</label>
+            <input type="number" class="form-control"   name="address[phone]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">LOCALIZACION:</label>
+            <input type="location" class="form-control" name="address[location]">
+        </div>
+        <br>
+
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a><?php echo Html::linkAction('index', 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+    </form>
+</center>

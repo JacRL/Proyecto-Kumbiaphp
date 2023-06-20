@@ -1,0 +1,27 @@
+<h1>Registro alumnos: </h1>
+<?php View::content() ?>
+
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">No. de control:</label>
+        <input type="text" class="form-control"   name="alumnos[no_control]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <input type="text" class="form-control" name="alumnos[nombre]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Apellidos:</label>
+        <input type="text" class="form-control" name="alumnos[apellidos]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email:</label>
+        <input type="text" class="form-control" name="alumnos[email]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fecha de nacimiento:</label>
+        <input type="date" class="form-control" name="alumnos[fecha_nacimiento]">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

@@ -1,0 +1,70 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<?php View::content()?>
+<h1>FILMS: </h1>
+<a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+
+<center>
+    <table >
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th>TITLE</th>
+            <!--<th>DESCRIPTION </th>
+            <th>RELEASE YEAR</th>-->
+            <th>LANGUAJE ID</th>
+            <TH>ORIGINAL LANGUAJE</TH>
+            <th>RENTAL DURATION</th>
+            <th>RENTAL RATE</th>
+            <th>RATING</th>
+            <th>OPCIONES</th>
+            <!-- <th>ACTOR</th>
+            <th>STORE</th> -->
+            <!--<th>LENGTH </th>
+            <th>REPLACEMENT COST</th>
+            <TH>SPECIAL FEATURES</TH> -->
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($film as $f):?>
+            <tr>
+                <td><?= $f->id?></td>
+                <td><?= $f->title?></td>
+                <td> <?=$f->getLanguaje()->name?></td>
+                <td><?= $f->original_language_id?></td>
+                <td><?= $f->rental_duration?></td>
+                <td><?= $f->rental_rate?></td>
+                <td><?= $f->rating?></td>
+                <td>
+                    <a><?php echo Html::linkAction("eliminar/$f->id", 'Eliminar', 'title="Eliminar" class="btn btn-danger" ') ?></a>
+                    <a><?php echo Html::linkAction("modificar/$f->id", 'Editar', 'title="Editar" class="btn btn-primary" ') ?></a>
+                    <a><?php echo Html::linkAction("ver/$f->id", 'Detalles', 'title="Editar" class="btn btn-primary" ') ?></a>
+    
+                </td>
+
+
+
+
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+    <br><br>
+    <a><?php echo Html::linkAction('registro', 'Registrar', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a><?php echo Html::linkAction('modificar', 'Modificar', 'title="modificar" class="btn btn-primary" ') ?></a>
+    <a><?php echo Html::linkAction("ver", 'Detalles', 'title="Editar" class="btn btn-primary" ') ?></a>
+            
+</center>

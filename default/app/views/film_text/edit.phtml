@@ -1,0 +1,22 @@
+<h1>EDIT FILM TEXT</h1>
+<?php View::content(); ?>
+<form method="post">
+    <div class="row g-3">
+        <div class="col-sm-6">
+            <label for="title" class="form-label">FIRST NAME</label>
+            <input type="text" name="filmtext[title]" class="form-control" id="title" placeholder=""
+                value="<?= $filmtext ->title?>" required="">
+        </div>
+        <div class="col-sm-6">
+            <label for="description" class="form-label">DESCRIPTION</label>
+            <input type="text" name="filmtext[description]" class="form-control" id="description" placeholder=""
+                value="<?= $filmtext ->description?>" required="">
+        </div>
+
+    </div>
+    <div class="row mt-1">
+        <div class="col-6">
+            <button class=" btn btn-primary " type="submit">GUARDAR</button>
+        </div>
+    </div>
+</form>

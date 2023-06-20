@@ -1,0 +1,31 @@
+<h1>Nuevo</h1>
+<?php View::content() ?>
+
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">Titulo</label>
+        <input type="text" class="form-control"   name="libro[titulo]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Paginas</label>
+        <input type="number" class="form-control" name="libro[paginas]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Categoria</label>
+        <input type="text" class="form-control" name="libro[categoria]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Autor</label>
+        <input type="text" class="form-control" name="libro[autor]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Editorial</label>
+        <input type="number" class="form-control" name="libro[autor]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Año</label>
+        <input type="number" class="form-control" name="libro[anio]">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

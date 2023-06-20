@@ -1,0 +1,22 @@
+<h1>Modificar Actor: <?= $actor_info->first_name ?> <?= $actor_info->last_name ?></h1>
+<?php View::content() ?>
+
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <?= Form::text("actor_info.first_name",array("class" => "form-control")) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Apellido</label>
+        <?= Form::text("actor_info.last_name",array("class" => "form-control")) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Información Pelicula</label>
+        <?= Form::text("actor_info.film_info",array("class" => "form-control")) ?>
+    </div>
+
+    </br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

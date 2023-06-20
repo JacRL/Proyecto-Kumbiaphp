@@ -1,0 +1,33 @@
+<h1>MODIFY LANGUAJE: <?= $payment->id ?> </h1>
+<?php View::content() ?>
+<br>
+<center>
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        <label class="form-label">CUSTOMER ID:</label>
+        <?= Form::number('payment.customer_id', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">STAFF ID:</label>
+        <?= Form::number('payment.staff_id', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">RENTAL ID:</label>
+        <?= Form::number('payment.rental_id', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">AMOUNT:</label>
+        <?= Form::number('payment.amount', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">PAYMENT DATE:</label>
+        <?= Form::date('payment.payment_date', array("class" => "form-control") ) ?>
+    </div>
+
+
+    <br><br>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+    <a><?php echo Html::linkAction('index', 'GO BACK', 'title="Volver" class="btn btn-primary" ') ?></a>
+</form>
+</center>

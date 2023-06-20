@@ -1,0 +1,66 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>STAFF: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+<center>
+<table >
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th>FISRT NAME</th>
+        <th>LAST NAME</th>
+        <th>ADDRESS ID </th>
+        <th>PICTURE</th>
+        <th>EMAIL</th>
+        <th>ADDRESS ID </th>
+        <th>STORE ID</th>
+        <th>ACTIVE</th>
+        <th>USERNAME </th>
+        <th>PASSWORD</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($staff as $s):?>
+        <tr>
+            <td><?= $s->id?></td>
+            <td><?= $s->first_name?></td>
+            <td><?= $s->last_name?></td>
+            <td><?= $s->address_id?></td>
+            <td><?= $s->picture?></td>
+            <td><?= $s->email?></td>
+            <td><?= $s->store_id?></td>
+            <td><?= $s->active?></td>
+            <td><?= $s->username?></td>
+            <td><?= $s->password?></td>
+
+        </tr>
+    <?php endforeach; ?>
+
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+    <br><br>
+
+    <a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a>  </a>
+    <a><?php echo Html::linkAction('modificar', 'MODIFY', 'title="modificar" class="btn btn-primary" ') ?></a>
+</center>
+
+

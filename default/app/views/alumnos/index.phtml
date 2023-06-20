@@ -1,0 +1,36 @@
+<h1>ALUMNOS: </h1>
+<BR>
+<table border="1">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th>No_control</th>
+        <th>NOMBRE</th>
+        <th>APELLIDOS</th>
+        <th>EMAIL</th>
+        <th>FECHA_NACIMIENTO</th>
+        <th>CREATED_IN</th>
+        <th>UPDATED_IN</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($ALUMNOS as $a):?>
+        <tr>
+            <td><?= $a->id?></td>
+            <td><?= $a->no_control?></td>
+            <td><?= $a->nombre?></td>
+            <td><?= $a->apellidos?></td>
+            <td><?= $a->email?></td>
+            <td><?= $a->fecha_nacimiento?></td>
+            <td><?= $a->created_at?></td>
+            <td><?= $a->updated_in?></td>
+        </tr>
+    <?php endforeach; ?>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="7" align="center">Pie de pagina</td>
+    </tr>
+    </tfoot>
+</table>

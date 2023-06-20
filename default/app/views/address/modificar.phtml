@@ -1,0 +1,50 @@
+<h1>Modificar direccion: <?= $address->customer_id ?> </h1>
+<?php View::content() ?>
+<br>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">ID CLIENTE:</label>
+            <?= Form::text('address.customer_id', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DIRECCION:</label>
+            <?= Form::text('address.address', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DIRECCION 2:</label>
+            <?= Form::text('address.address2', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DISTRITO:</label>
+            <?= Form::text('address.district', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">ID CIUDAD:</label>
+            <?= Form::text('address.city_id', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">CODIGO POSTAL:</label>
+            <?= Form::text('address.postal_code', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">TELEFONO:</label>
+            <?= Form::text('address.phone', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">LOCALIZACION:</label>
+            <?= Form::text('address.location', array("class" => "form-control") ) ?>
+        </div>
+
+
+
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a><?php echo Html::linkAction('index', 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+    </form>

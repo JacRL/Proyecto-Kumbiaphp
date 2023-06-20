@@ -1,0 +1,48 @@
+<h1>Registro de clientes: </h1>
+<?php View::content() ?>
+<center>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">STORE ID:</label>
+            <input type="number" class="form-control"   name="customer[store_id]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">NOMBRE (S):</label>
+            <input type="text" class="form-control" name="customer[first_name]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">APELLIDOS:</label>
+            <input type="text" class="form-control"   name="customer[last_name]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">EMAIL:</label>
+            <input type="text" class="form-control" name="customer[email]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DIRECCION ID:</label>
+            <input type="number" class="form-control"   name="customer[address_id]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">ACTIVO:</label>
+            <input type="number" class="form-control" name="customer[active]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">INFORMACION:</label>
+            <input type="text" class="form-control"   name="customer[informacion]">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">FECHA CREACION:</label>
+            <input type="date" class="form-control" name="customer[create_date]">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a><?php echo Html::linkAction('index', 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+    </form>
+</center>

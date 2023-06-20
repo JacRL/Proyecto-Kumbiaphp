@@ -1,0 +1,46 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1 align="center">CATEGORY: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+<table >
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th>NOMBRE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($category as $ca):?>
+            <tr>
+                <td><?= $ca->id?></td>
+                <td><?= $ca->name?></td>
+            </tr>
+        <?php endforeach; ?>
+
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+    <br><br>
+<center>
+    <a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a>  </a>
+    <a><?php echo Html::linkAction('modificar', 'MODIFY', 'title="modificar" class="btn btn-primary" ') ?></a>
+</center>
+

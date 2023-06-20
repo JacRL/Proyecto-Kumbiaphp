@@ -1,0 +1,36 @@
+<h1>Libros</h1>
+<br>
+<?php View::content(); ?>
+<br>
+<table border="1">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th>TITULO</th>
+        <th>PAGINAS</th>
+        <th>CATEGORIA</th>
+        <th>AUTOR</th>
+        <th>EDICION</th>
+        <th>AÑO</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($libros as $l):?>
+    <tr>
+        <td><?= $l->id?></td>
+        <td><?= $l->titulo?></td>
+        <td><?= $l->paginas?></td>
+        <td><?= $l->categoria?></td>
+        <td><?= $l->autor?></td>
+        <td><?= $l->editorial?></td>
+        <td><?= $l->anio?></td>
+    </tr>
+    <?php endforeach; ?>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="7" align="center">Pie de pagina</td>
+    </tr>
+    </tfoot>
+</table>

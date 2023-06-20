@@ -1,0 +1,26 @@
+<h1>Modificar productos: <?= $productos->titulo ?> </h1>
+<?php View::content() ?>
+<br>
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <?= Form::text('productos.nombre', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">descripcion:</label>
+        <?= Form::text('productos.descripcion', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Precio de compra:</label>
+        <?= Form::text('productos.precio_compra', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">Precio de venta:</label>
+        <?= Form::text('productos.precio_venta', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Utilidad:</label>
+        <?= Form::text('productos.utilidad', array("class" => "form-control") ) ?>
+    </div>>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

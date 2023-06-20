@@ -1,0 +1,47 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>STORE: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+<center>
+<table >
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th>MANAGER STAFF ID</th>
+        <th>ADDRESS ID</th>
+        <th>LAST UPDATE</th>
+        <th>NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($store as $s):?>
+        <tr>
+            <td><?= $s->id?></td>
+            <td><?= $s->manager_staff_id?></td>
+            <td><?= $s->address_id?></td>
+            <td><?= $s->nombre?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+    <br><br>
+    <a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a><?php echo Html::linkAction('modificar', 'MODIFY', 'title="modificar" class="btn btn-primary" ') ?></a>
+</center>
+
+

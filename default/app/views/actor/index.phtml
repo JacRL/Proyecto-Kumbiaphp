@@ -1,0 +1,41 @@
+<h1>Actor: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th>NOMBRE</th>
+        <th>APELLIDOS</th>
+        <th>OPCIONES</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($actor as $a):?>
+        <tr>
+            <td><?= $a->id?></td>
+            <td><?= $a->first_name?></td>
+            <td><?= $a->last_name?></td>
+            <td>
+                <a><?php echo Html::linkAction("eliminar/$a->id", 'Eliminar', 'title="Eliminar" class="btn btn-danger" ') ?></a>
+                <a><?php echo Html::linkAction("modificar/$a->id", 'Editar', 'title="Editar" class="btn btn-primary" ') ?></a>
+                <a><?php echo Html::linkAction("ver/$a->id", 'Detalles', 'title="Detalles" class="btn btn-primary" ') ?></a>
+            </td>
+            
+        </tr>
+    <?php endforeach; ?>
+
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+    <br><br>
+    <a><?php echo Html::linkAction('registro', 'Registrar', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a>  </a>
+    <a><?php echo Html::linkAction('modificar', 'Modificar', 'title="modificar" class="btn btn-primary" ') ?></a>
+
+
+

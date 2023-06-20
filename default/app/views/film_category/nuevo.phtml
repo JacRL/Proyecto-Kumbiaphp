@@ -1,0 +1,22 @@
+<h1>Nuevo Peliculas-Categoria</h1>
+<?php View::content(); ?>
+<form method="post">
+    <div class="row g-3">
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">ID Pelicula</label>
+            <input type="number" name="film_category[film_id]" class="form-control" id="film_id">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="category_id" class="form-label">ID Categoria</label>
+            <input type="number" name="film_category[category_id]" class="form-control" id="category_id">
+        </div>
+
+    </div>
+    <br>
+    <div class="row mt-1">
+        <div class="col-6">
+            <button class=" btn btn-primary " type="submit">GUARDAR</button>
+        </div>
+    </div>
+</form>

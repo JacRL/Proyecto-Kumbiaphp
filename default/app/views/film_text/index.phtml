@@ -1,0 +1,19 @@
+<h1>FILM TEXT</h1>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>FILM ID</th>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($filmtext as $a): ?>
+        <tr>
+            <td><?= $a->film_id ?></td>
+            <td><?= $a->title ?></td>
+            <td><?= $a->description ?></td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

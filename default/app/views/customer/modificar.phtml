@@ -1,0 +1,50 @@
+<h1>Modificar cliente: <?= $customer->first_name ?> </h1>
+<?php View::content() ?>
+<br>
+<center>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">STORE ID:</label>
+            <?= Form::text('customer.store_id', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">NOMBRE:</label>
+            <?= Form::text('customer.first_name', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">APELLIDOS:</label>
+            <?= Form::text('customer.last_name', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">EMAIL:</label>
+            <?= Form::text('customer.email', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">ID DIRECCION:</label>
+            <?= Form::text('customer.address_id', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">ACTIVO:</label>
+            <?= Form::text('customer.active', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">INFORMACION:</label>
+            <?= Form::text('customer.informacion', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label class="form-label">DIA DE REGISTRO:</label>
+            <?= Form::text('customer.create_date', array("class" => "form-control") ) ?>
+        </div>
+        <br>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a><?php echo Html::linkAction('index', 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+    </form>
+</center>

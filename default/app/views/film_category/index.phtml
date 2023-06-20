@@ -1,0 +1,23 @@
+<h1>Lista de Consumidores</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID Pelicula</th>
+            <th>ID Categoria</th>
+            <th>Actualizado</th>
+            <th>Creado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($filmcategory as $fc): ?>
+        <tr>
+            <td><?= $fc->id ?></td>
+            <td><?= $fc->film_id ?></td>
+            <td><?= $fc->category_id ?></td>
+            <td><?= $fc->updated_id ?></td>
+            <td><?= $fc->created_at ?></td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

@@ -1,0 +1,68 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+
+<h1>Direcciones: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+<center>
+    <table border="1">
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th>CUSTOMER ID</th>
+            <th>DIRECCION 1</th>
+            <th>DIRECCION 2</th>
+            <th> DISTRITO </th>
+            <th>ID CIUDAD</th>
+            <th>CODIGO POSTAL</th>
+            <th>TELEFONO</th>
+            <th>LOCALIZACION</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($address as $ad):?>
+            <tr>
+                <td><?= $ad->id?></td>
+                <td><?= $ad->customer_id?></td>
+                <td><?= $ad->address1?></td>
+                <td><?= $ad->address2?></td>
+                <td><?= $ad->district?></td>
+                <td><?= $ad->getCity()->city?></td>
+                <td><?= $ad->postal_code?></td>
+                <td><?= $ad->phone?></td>
+                <td><?= $ad->location?></td>
+            </tr>
+        <?php endforeach; ?>
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="7" align="center">
+
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    <center>
+        <br>
+        <a><?php echo Html::linkAction('registro', 'Registrar', 'title="registro" class="btn btn-primary" ') ?></a>
+        <a>  </a>
+        <a><?php echo Html::linkAction('modificar', 'Modificar', 'title="modificar" class="btn btn-primary" ') ?></a>
+    </center>
+</center>
+

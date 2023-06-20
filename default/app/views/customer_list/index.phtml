@@ -1,0 +1,35 @@
+<h1>Lista de Consumidores</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID Cliente</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Codigo ZIP</th>
+            <th>Telefono</th>
+            <th>Ciudad</th>
+            <th>Pais</th>
+            <th>Notas</th>
+            <th>SID</th>
+            <th>Actualizado</th>
+            <th>Creado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($customerlist as $cl): ?>
+        <tr>
+            <td><?= $cl->id ?></td>
+            <td><?= $cl->name ?></td>
+            <td><?= $cl->address ?></td>
+            <td><?= $cl->zip_code ?></td>
+            <td><?= $cl->phone ?></td>
+            <td><?= $cl->city	 ?></td>
+            <td><?= $cl->country ?></td>
+            <td><?= $cl->notes	 ?></td>
+            <td><?= $cl->SID ?></td>
+            <td><?= $cl->updated_id ?></td>
+            <td><?= $cl->created_at ?></td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

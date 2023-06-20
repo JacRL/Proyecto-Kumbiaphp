@@ -1,0 +1,73 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+
+<h1>MODIFY STAFF: <?= $staff->id ?> </h1>
+<?php View::content() ?>
+<br>
+<center>
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        <label class="form-label">FIRST NAME:</label>
+        <?= Form::text('staff.first_name', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">LAST NAME:</label>
+        <?= Form::text('staff.last_name', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">ADDRESS ID:</label>
+        <?= Form::NUMBER('staff.address_id', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">PICTURE:</label>
+        <?= Form::text('staff.picture', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">EMAIL:</label>
+        <?= Form::email('staff.email', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">STORE ID:</label>
+        <?= Form::number('staff.store_id', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">ACTIVE:</label>
+        <?= Form::number('staff.active', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">USERNAME:</label>
+        <?= Form::text('staff.username', array("class" => "form-control") ) ?>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">PASSWORD:</label>
+        <?= Form::password('staff.password', array("class" => "form-control") ) ?>
+    </div>
+
+
+    <br><br>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+    <a><?php echo Html::linkAction('index', 'GO BACK', 'title="Volver" class="btn btn-primary" ') ?></a>
+</form>
+</center>

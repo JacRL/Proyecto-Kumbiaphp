@@ -1,0 +1,22 @@
+<h1>Modificar alumnos: <?= $alumnos->no_control ?> </h1>
+<?php View::content() ?>
+<br>
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">Numero de control:</label>
+        <?= Form::text('alumnos.no_control', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <?= Form::text('alumnos.nombre', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Apellidos:</label>
+        <?= Form::text('alumnos.apellidos', array("class" => "form-control") ) ?>
+    </div>
+    <div class="mb-3">Email:</label>
+        <?= Form::text('alumnos.email', array("class" => "form-control") ) ?>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

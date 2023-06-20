@@ -1,0 +1,53 @@
+<h1>STAFF LIST RECORD</h1>
+<?php View::content(); ?>
+<form method="post">
+    <div class="row g-3">
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">ID:</label>
+            <input type="number" name="staff_list[id]" class="form-control" id="film_id1">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">NAME:</label>
+            <input type="text" name="staff_list[name]" class="form-control" id="film_id2">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">ADDRESS:</label>
+            <input type="text" name="staff_list[address]" class="form-control" id="film_id3">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">ZIP CODE</label>
+            <input type="text" name="staff_list[zip_code]" class="form-control" id="film_id4">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">PHONE:</label>
+            <input type="text" name="staff_list[phone]" class="form-control" id="film_id5">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">CITY:</label>
+            <input type="text" name="staff_list[city]" class="form-control" id="film_id6">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">COUNTRY:</label>
+            <input type="text" name="staff_list[country]" class="form-control" id="film_id7">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="film_id" class="form-label">SID:</label>
+            <input type="number" name="staff_list[SID]" class="form-control" id="film_id8">
+        </div>
+    </div>
+    <br>
+    <div class="row mt-1">
+        <div class="col-6">
+            <br>
+            <button type="submit" class="btn btn-primary">SAVE</button>
+            <a><?php echo Html::linkAction('index', 'GO BACK', 'title="GO BACK" class="btn btn-primary" ') ?></a>
+        </div>
+    </div>
+</form>

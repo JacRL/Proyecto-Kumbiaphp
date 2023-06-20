@@ -1,0 +1,43 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>COUNTRY: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+    <table border="1">
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th>COUNTRY</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($country as $co):?>
+            <tr>
+                <td><?= $co->id?></td>
+                <td><?= $co->country?></td>
+            </tr>
+        <?php endforeach; ?>
+
+        </tbody>
+    </table>
+    <center>
+        <br>
+        <a><?php echo Html::linkAction('registro', 'Registrar', 'title="registro" class="btn btn-primary" ') ?></a>
+        <a>  </a>
+        <a><?php echo Html::linkAction('modificar', 'Modificar', 'title="modificar" class="btn btn-primary" ') ?></a>
+    </center>
+

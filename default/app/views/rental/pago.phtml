@@ -1,0 +1,43 @@
+<h1>NEW PAYMENT</h1>
+<a><?php echo Html::linkAction("../rental/ver/$rental_id", 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+<br>
+<br>
+<?php View::content() ?>        
+<div class="row">
+    <div class="col-6">
+        <div class="imagen">
+            <img src="https://previews.123rf.com/images/quartadis/quartadis1612/quartadis161200028/68896373-concepto-de-cine-con-palomitas-de-ma%C3%ADz-gafas-3d-y-bebida-ilustraci%C3%B3n-de-vector-plano-dibujos.jpg" width="80%">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <form class="form-group2" method="post">
+                <label class="form-label">Customer's name</label>
+                <input type="text" class="form-control" required value="<?php echo $fullNameCustomer; ?>" disabled>
+                <input type="hidden" class="form-control" name="payment[customer_id]" required value="<?php echo $customer_id; ?>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Employee's name</label>
+                <input type="text" class="form-control" required value="<?php echo $fullNameStaff; ?>" disabled>
+                <input type="hidden" class="form-control" name="payment[staff_id]" required value="<?php echo $staff_id; ?>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Amount</label>
+                <input type="text" class="form-control" required value="<?php echo "$",$costoFinal; ?>" disabled>
+                <input type="hidden" class="form-control" name="payment[amount]" required value="<?php echo $costoFinal; ?>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Date of payment</label>
+                <input type="date" class="form-control" name="payment[payment_date]" required>
+            </div>
+            <div class="mb-3">
+                <input type="hidden" class="form-control" name="payment[rental_id]" required value="<?php echo $rental_id; ?>">
+            </div>
+            <div class="div-btn">
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        

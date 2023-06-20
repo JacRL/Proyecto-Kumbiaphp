@@ -1,0 +1,54 @@
+<h1>Modificar Lista de Peliculas</h1>
+<?php View::content(); ?>
+<form method="post">
+    <div class="row g-3">
+        <div class="col-sm-6">
+            <label for="title" class="form-label">Titulo</label>
+            <input type="text" name="film_list[title]" class="form-control" id="title" placeholder=""
+                   value="<?= $film_list ->title?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="description" class="form-label">Descripción</label>
+            <input type="text" name="film_list[description]" class="form-control" id="description" placeholder=""
+                   value="<?= $film_list ->description?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="category" class="form-label">Categoria</label>
+            <input type="text" name="film_list[category]" class="form-control" id="category" placeholder=""
+                   value="<?= $film_list ->category?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="price" class="form-label">Precio</label>
+            <input type="number" name="film_list[price]" class="form-control" id="price" placeholder=""
+                   value="<?= $film_list ->price?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="length" class="form-label">Longitud</label>
+            <input type="number" name="film_list[length]" class="form-control" id="length" placeholder=""
+                   value="<?= $film_list ->length?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="rating" class="form-label">Clasificación</label>
+            <input type="text" name="film_list[rating]" class="form-control" id="rating" placeholder=""
+                   value="<?= $film_list ->rating?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="actors" class="form-label">Actores</label>
+            <input type="text" name="film_list[actors]" class="form-control" id="actors" placeholder=""
+                   value="<?= $film_list ->actors?>" required="">
+        </div>
+
+    </div>
+    <br>
+    <div class="row mt-1">
+        <div class="col-6">
+            <button class=" btn btn-primary " type="submit">GUARDAR</button>
+        </div>
+    </div>
+</form>

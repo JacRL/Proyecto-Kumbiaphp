@@ -1,0 +1,62 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>RENTAL: </h1>
+<br>
+<a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+<?php View::content(); ?>
+<br>
+<center>
+<table >
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th>PELICULA</th>
+        <th>CLIENTE</th>
+        <th>EMPLEADO</th>
+        <th>RETURN DATE</th>
+        <th>STORE</th>
+        <th>OPCIONES</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($rental as $r):?>
+        <tr>
+            <td><?= $r->id?></td>
+            <td><?php foreach ($r->getInventory() as $i): ?>
+                <?= $i->getfilm()->title ?>
+            <?php endforeach; ?></td>
+            <td><?= $r->getcustomer()->first_name. ' ' .$r->getcustomer()->last_name?></td>
+            <td><?= $r->getstaff()->first_name. ' ' .$r->getstaff()->last_name?></td>
+            <td><?= $r->return_date?></td>
+            <td> 
+                <?php foreach ($r->getInventory() as $i): ?>
+                    <?= $i->Store()->nombre ?>
+                <?php endforeach; ?>
+            </td>
+            <td>
+                <a><?php echo Html::linkAction("eliminar/$r->id", 'Eliminar', 'title="Eliminar" class="btn btn-danger" ') ?></a>
+                <a><?php echo Html::linkAction("modificar/$r->id", 'Editar', 'title="Editar" class="btn btn-primary" ') ?></a>
+                <a><?php echo Html::linkAction("ver/$r->id", 'Detalles', 'title="Editar" class="btn btn-primary" ') ?></a>
+            
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+    <br><br>
+</center>
+
+

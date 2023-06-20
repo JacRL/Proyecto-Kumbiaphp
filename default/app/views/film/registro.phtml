@@ -1,0 +1,86 @@
+<h1>Registro Films:</h1>
+<?php View::content() ?>
+
+<form class="form-group" method="post">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="title" class="form-label">TITULO:</label>
+                <input type="text" class="form-control" name="film[title]" id="title">
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">DESCRIPCION:</label>
+                <input type="text" class="form-control" name="film[description]" id="description">
+            </div>
+
+            <div class="mb-3">
+                <label for="release_year" class="form-label">AÑO:</label>
+                <input type="number" class="form-control" name="film[release_year]" id="release_year">
+            </div>
+
+            <div class="mb-3">
+                <label for="language" class="form-label">LENGUAJE:</label>
+                <select id="language" name="film[language_id]" class="form-control">
+                    <option value="1">English</option>
+                    <option value="2">Italian</option>
+                    <option value="3">Japanese</option>
+                    <option value="4">Mandarin</option>
+                    <option value="5">French</option>
+                    <option value="6">German</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="original_language" class="form-label">LENGUAJE ORIGINAL:</label>
+                <select id="original_language" name="film[original_language_id]" class="form-control">
+                    <option value="1">English</option>
+                    <option value="2">Italian</option>
+                    <option value="3">Japanese</option>
+                    <option value="4">Mandarin</option>
+                    <option value="5">French</option>
+                    <option value="6">German</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="rental_duration" class="form-label">DURACION ALQUILER:</label>
+                <input type="number" class="form-control" name="film[rental_duration]" id="rental_duration">
+            </div>
+        </div>
+        <div class="col-6">
+
+            <div class="mb-3">
+                <label for="rental_rate" class="form-label">TASA DE ARRENDAMIENTO:</label>
+                <input type="number" step="0.01" class="form-control" name="film[rental_rate]" id="rental_rate">
+            </div>
+
+            <div class="mb-3">
+                <label for="length" class="form-label">LONGITUD:</label>
+                <input type="number" class="form-control" name="film[length]" id="length">
+            </div>
+
+            <div class="mb-3">
+                <label for="replacement_cost" class="form-label">COSTO DE REEMPLAZO:</label>
+                <input type="number" class="form-control" name="film[replacement_cost]" id="replacement_cost">
+            </div>
+
+            <div class="mb-3">
+                <label for="rating" class="form-label">CLASIFICACIÓN:</label>
+                <input type="text" class="form-control" name="film[rating]" id="rating">
+            </div>
+            <div class="mb-3">
+                <label for="special_features" class="form-label">CARACTERISTICAS ESPECIALES:</label>
+                <input type="text" class="form-control" name="film[special_features]" id="special_features">
+            </div>
+        </div>
+        <div class="col-12">
+            <br>
+            <center>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a><?php echo Html::linkAction('index', 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+            </center>
+              </div>
+    </div>
+</form>

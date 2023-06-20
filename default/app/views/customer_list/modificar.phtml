@@ -1,0 +1,60 @@
+<h1>Modificar lista de clientes</h1>
+<?php View::content(); ?>
+<form method="post">
+    <div class="row g-3">
+        <div class="col-sm-6">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" name="customer_list[name]" class="form-control" id="name" placeholder=""
+                value="<?= $customer_list ->name?>" required="">
+        </div>
+        <div class="col-sm-6">
+            <label for="address" class="form-label">Descripcion</label>
+            <input type="text" name="customer_list[address]" class="form-control" id="address" placeholder=""
+                value="<?= $customer_list ->address?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="zip_code" class="form-label">Código ZIP</label>
+            <input type="text" name="customer_list[zip_code]" class="form-control" id="zip_code" placeholder=""
+                   value="<?= $customer_list ->zip_code?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="phone" class="form-label">Telefono</label>
+            <input type="text" name="customer_list[phone]" class="form-control" id="phone" placeholder=""
+                   value="<?= $customer_list ->zip_code?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="city" class="form-label">Ciudad</label>
+            <input type="text" name="customer_list[city]" class="form-control" id="city" placeholder=""
+                   value="<?= $customer_list ->city?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="country" class="form-label">Pais</label>
+            <input type="text" name="customer_list[country]" class="form-control" id="country" placeholder=""
+                   value="<?= $customer_list ->country?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="notes" class="form-label">Notas</label>
+            <input type="text" name="customer_list[notes]" class="form-control" id="notes" placeholder=""
+                   value="<?= $customer_list ->notes?>" required="">
+        </div>
+
+        <div class="col-sm-6">
+            <label for="SID" class="form-label">SID</label>
+            <input type="number" name="customer_list[SID]" class="form-control" id="SID" placeholder=""
+                   value="<?= $customer_list ->SID?>" required="">
+        </div>
+
+
+    </div>
+    <br>
+    <div class="row mt-1">
+        <div class="col-6">
+            <button class=" btn btn-primary " type="submit">GUARDAR</button>
+        </div>
+    </div>
+</form>

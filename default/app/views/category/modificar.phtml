@@ -1,0 +1,17 @@
+<br>
+<h1>Modify category: <?= $category->id ?> </h1>
+<?php View::content() ?>
+<br>
+<center>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">CATEGORY:</label>
+            <?= Form::text('category.name', array("class" => "form-control") ) ?>
+        </div>
+        <br><br>
+        <CENTER>
+            <button type="submit" class="btn btn-primary">SAVE</button>
+            <a><?php echo Html::linkAction('index', 'GO BACK', 'title="Volver" class="btn btn-primary" ') ?></a>
+        </CENTER>
+    </form>
+</center>

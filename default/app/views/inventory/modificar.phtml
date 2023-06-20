@@ -1,0 +1,18 @@
+<h1>Modificar INVENTORY: <?= $inventory->id ?> </h1>
+<?php View::content() ?>
+<br>
+<center>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">FILM ID:</label>
+            <?= Form::text('inventory.film_id', array("class" => "form-control") ) ?>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">STORE ID:</label>
+            <?= Form::text('inventory.store_id', array("class" => "form-control") ) ?>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">SAVE</button>
+        <a><?php echo Html::linkAction('index', 'GO BACK', 'title="Volver" class="btn btn-primary" ') ?></a>
+    </form>
+</center>

@@ -1,0 +1,225 @@
+<br>
+<body class="bg-custom">
+<div class="container" >
+    <?php foreach ($actor as $ac):?>
+        <div class="row" style=" padding: 10px; border-bottom: 5px solid  #486DDA;">
+            <div class="col-4">
+                <h1 class="text-success-emphasis"><B>NAME ACTOR:</B></h1>
+            </div>
+            <div class="col-6 text-center "><h1 class="text-success-emphasis">
+                    <I><?=$actor[0]->completeName()?></I>
+                </h1></div>
+        </div>
+        <br><BR>
+        <div class="row" >
+            <div class="col-2" >
+                <img src="https://cdn.britannica.com/35/130635-050-CD1ABFA3/Penelope-Cruz.jpg" alt="Imagen" class="img-thumbnail" style="width:200px;height:200px;">
+            </div>
+            <div class="col-10" >
+                <ul class="list-group" >
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA; text-align: center;">
+                        <b style="color: #ffffff;">INFORMATION</b>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">FIRST NAME:<b>
+                            <?php foreach ($actoresName as $an): ?>
+                                <?= $an?>
+                            <?php endforeach; ?>
+                        </b>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">LAST NAME :<b>
+                            <?php foreach ($lastNameActor as $lna): ?>
+                                <?= $lna?>
+                            <?php endforeach; ?>
+                        </b>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">DATE REGISTRER:<b>
+                            <?php foreach ($dateRegistrer as $dr): ?>
+                                <?= $dr?>
+                            <?php endforeach; ?>
+                        </b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div CLASS="row">
+            <div class="col-6" >
+                <ul class="list-group" >
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA; text-align: center;">
+                        <b style="color: #ffffff;">TOTAL FILMS</b>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;"><b>
+                            <?php foreach ($ToTmoviesForActor as $tmfa): ?>
+                                <?= $tmfa?>
+                            <?php endforeach; ?>
+                        </b>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6" >
+                <ul class="list-group" >
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA; text-align: center;">
+                        <b style="color: #ffffff;">TOTAL REVENUE</b>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;"><b>
+                            $ <?php foreach ($getTotRevenue as $tot): ?>
+                                <?= $tot?>
+                            <?php endforeach; ?>
+                        </b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <BR>
+
+        <div class="col-12 h-auto">
+            <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-success" style="background-color: #486DDA; color:#FFFFFF;">
+                <h6 class="mx-auto text-center"><strong>PARTICIPATION OF FILMS BY CATEGORY</strong></h6>
+            </li>
+            <div class="row">
+                <div class="col mx-0">
+                    <ul class="list-group w-auto py-0">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            ACTION:
+                            <?php foreach ($totMoviesAction as $tma): ?>
+                                <?= $tma?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;"">
+                        ANIMATION:
+                        <?php foreach ($totMoviesAni as $tman): ?>
+                            <?= $tman?>
+                        <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            CHILDREN:
+                            <?php foreach ($totMoviesChild as $tmc): ?>
+                                <?= $tmc?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            CLASISCS:
+                            <?php foreach ($totMoviesCla as $tmc): ?>
+                                <?= $tmc?>
+                            <?php endforeach; ?>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mx-0">
+                    <ul class="list-group w-auto py-0">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            COMEDY:
+                            <?php foreach ($totMoviesCom as $tmc): ?>
+                                <?= $tmc?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;"">
+                        DOCUMENTARY:
+                        <?php foreach ($totMoviesDoc as $tmd): ?>
+                            <?= $tmd?>
+                        <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            DRAMA:
+                            <?php foreach ($totMoviesDra as $tmdr): ?>
+                                <?= $tmdr?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            FAMILY:
+                            <?php foreach ($totMoviesFa as $tmfam): ?>
+                                <?= $tmfam?>
+                            <?php endforeach; ?>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mx-0">
+                    <ul class="list-group w-auto py-0">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            FOREIGN:
+                            <?php foreach ($totMoviesFo as $tmfo): ?>
+                                <?= $tmfo?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;"">
+                        GAMES:
+                        <?php foreach ($totMoviesGam as $tmga): ?>
+                            <?= $tmga?>
+                        <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            HORROR:
+                            <?php foreach ($totMoviesHo  as $tmh): ?>
+                                <?= $tmh?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            MUSIC:
+                            <?php foreach ($totMoviesMu as $tmm): ?>
+                                <?= $tmm?>
+                            <?php endforeach; ?>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mx-0">
+                    <ul class="list-group w-auto py-0">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            NEW:
+                            <?php foreach ($totMoviesNew as $tmn): ?>
+                                <?= $tmn?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;"">
+                        SCI-FIC:
+                        <?php foreach ($totMoviesSF as $tmsf): ?>
+                            <?= $tmsf?>
+                        <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            SPORTS:
+                            <?php foreach ($totMoviesSp as $tmsp): ?>
+                                <?= $tmsp?>
+                            <?php endforeach; ?>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;">
+                            TRAVEL:
+                            <?php foreach ($totMoviesTra as $tmtr): ?>
+                                <?= $tmtr?>
+                            <?php endforeach; ?>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-6" >
+                <ul class="list-group" >
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA; text-align: center;">
+                        <b style="color: #ffffff;">MOVIES PARTICIPANT</b>
+                    </li>
+                    <?php foreach ($allMoviesParticipant as $movie): ?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;" ><?= $movie->title?></li>
+                    <?php endforeach; ?>
+                </ul>
+                <br>
+            </div>
+            <div class="col-6" >
+                <ul class="list-group" >
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-custom" style="background-color: #486DDA; text-align: center;">
+                        <b style="color: #ffffff;">MOVIES CATEGORY</b>
+                    </li>
+                    <?php foreach ($allMoviesParticipant as $movie): ?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #F2F2F2;" ><?= $movie->name?></li>
+                    <?php endforeach; ?>
+                </ul>
+                <br>
+            </div>
+        </div>
+        <br>
+    <?php endforeach; ?>
+</div><!-- DIV FINAL -->
+<br>
+<br>

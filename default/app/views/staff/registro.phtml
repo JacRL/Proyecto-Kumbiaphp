@@ -1,0 +1,71 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>STAFF RECORD: </h1>
+<?php View::content() ?>
+<center>
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">FIRST NAME:</label>
+        <input type="text" class="form-control"   name="staff[first_name]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">LAST NAME:</label>
+        <input type="text" class="form-control"   name="staff[last_name]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">ADDRESS ID:</label>
+        <input type="number" class="form-control"   name="staff[address_id]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">PICTURE:</label>
+        <input type="text" class="form-control"   name="staff[picture]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">EMAIL:</label>
+        <input type="email" class="form-control"   name="staff[email]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">STORE ID:</label>
+        <input type="number" class="form-control"   name="staff[store_id]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">ACTIVE:</label>
+        <input type="number" class="form-control"   name="staff[active]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">USERNAME:</label>
+        <input type="text" class="form-control"   name="staff[username]">
+    </div>
+    <br>
+    <div class="mb-3">
+        <label class="form-label">PASSWORD:</label>
+        <input type="password" class="form-control"   name="staff[password]">
+    </div>
+    <br>
+
+
+    <br>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+    <a><?php echo Html::linkAction('index', 'GO BACK', 'title="GO BACK" class="btn btn-primary" ') ?></a>
+</form>
+</center>

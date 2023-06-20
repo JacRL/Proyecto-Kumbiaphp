@@ -1,0 +1,112 @@
+<style>
+    section {
+        display: flex;
+        width: 1250px;
+        height: 290px;
+    }
+    section img{
+        width: 0px;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+    }
+    section img:hover{
+        cursor: crosshair;
+        width: 250px;
+        opacity: 1;
+        filter: contrast(120%);
+    }
+    .bg-custom {
+        background-color: #191A20;
+    }
+    .text-custom {
+        color: #313442;
+    }
+    .list-custom {
+        background-color: #313442;
+        color: #fff; /* opcional: para establecer el color del texto en blanco */
+    }
+</style>
+<body class="bg-custom">
+<div class="container" >
+        <div class="row" >
+            <!--<div class="col-4"><h1>FILM:</h1></div>-->
+            <div class="col-12 text-center" style="color: #486DDA">
+                <h5 class="display-4 text-custom"><b>RENTAL DATA</b></h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6" >
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center list-custom text-center" style="background-color: #486DDA"><b>BASIC INFORMATION</b></li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center" >CUSTOMER NAME:<b>
+                                <?php foreach ($customerName as $rm): ?>
+                                    <?= $rm?>
+                                <?php endforeach; ?>
+                            </b></li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center" >STAFF NAME:<b>
+                                <?php foreach ($staffName as $sn): ?>
+                                    <?= $sn?>
+                                <?php endforeach; ?>
+                            </b></li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center" >RENTAL NAME:<b>
+                                <?php foreach ($filmName as $fn): ?>
+                                    <?= $fn?>
+                                <?php endforeach; ?>
+                            </b></li>
+                            
+                            <li class="list-group-item d-flex justify-content-between align-items-center" >
+                        NAME STORE: <b><?=$fullNameStore->full_name?></b></li>
+                            
+                            <br>
+                            <li class="list-group-item d-flex justify-content-between align-items-center list-custom text-center" style="background-color: #486DDA"><b>DATE
+                                </li>
+                    <?php foreach ($rental as $r):?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" >RENTAL DATE:<b><?= $r->rental_date?></b></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center" >RETURN DATE:<b><?= $r->return_date?></b></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+                <div class="col-">
+            
+                    <ul class="list-group" >
+                    
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-custom text-center" style="background-color: #486DDA"><b>PAYMENT DETAILS</li>
+                <?php if ($mostrar): ?>
+                    <div class="imagen">
+                        <img src="https://img.freepik.com/vector-premium/trabajo-urgente-concepto-fecha-limite-acercandose-lugar-trabajo-oficina-caos-documentos-papel-voladores-carpetas-reloj-arena-calendario-despertador-ilustracion-vectorial-dibujos-animados_87771-16167.jpg?w=2000" width="500px">
+                    </div>
+                    
+                        <h4 class= "list-group-item d-flex justify-content-between align-items-center" style="color:red;">NO PAYMENT MADE</h4>
+                        <?php foreach ($rental as $r):?>
+                        <a><?php echo Html::linkAction("pago/$r->id", 'PAID', 'title="Pagar" class="btn btn-outline-primary btn-lg btn-block" ') ?></a>
+                        <?php endforeach; ?>
+            
+                <?php else: ?>
+                    
+                <div class="imagen">
+                    <img src="https://img.freepik.com/vector-premium/diseno-entradas-cine-plantilla-pase-evento-pelicula_543062-2412.jpg" width="500px">
+                </div>
+                            <?php foreach ($paymentsDone as $pd): ?>
+                                <li class="list-group-item d-flex justify-content-between align-items-center" >Precio: $<?=$pd->amount?></li>
+                                <li class="list-group-item d-flex justif y-content-between align-items-center" ><span>Fecha de pago: <?=$pd->payment_date?></li>
+                            <?php endforeach; ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center" >Nombre del Empleado:
+                                <?=$fullNameStaff->full_name?></li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center" >Nombre del cliente: <?=$fullNameCustomer->full_name?></li>
+                <?php endif; ?>
+                        
+                    </ul>
+                    <br>
+                </div>
+
+            
+
+    
+</div><!-- DIV FINAL -->
+<br>

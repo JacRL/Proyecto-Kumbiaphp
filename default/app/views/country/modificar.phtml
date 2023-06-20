@@ -1,0 +1,14 @@
+<h1>Modificar Actores: <?= $country->id ?> </h1>
+<?php View::content() ?>
+<br>
+<center>
+    <form class="form-group" method="post">
+        <div class="mb-3">
+            <label class="form-label">COUNTRY:</label>
+            <?= Form::text('country.country', array("class" => "form-control") ) ?>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a><?php echo Html::linkAction('index', 'Volver', 'title="Volver" class="btn btn-primary" ') ?></a>
+    </form>
+</center>

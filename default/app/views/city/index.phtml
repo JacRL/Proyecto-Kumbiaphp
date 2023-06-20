@@ -1,0 +1,42 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>CITY: </h1>
+<br>
+<?php View::content(); ?>
+<br>
+    <table >
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th>CITY</th>
+            <th>COUNTRY ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($city as $ci):?>
+            <tr>
+                <td><?= $ci->id?></td>
+                <td><?= $ci->city?></td>
+                <td><?= $ci->country_id?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+    <br><br>
+<center>
+    <a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a>  </a>
+    <a><?php echo Html::linkAction('modificar', 'MODIFY', 'title="modificar" class="btn btn-primary" ') ?></a>
+</center>
+

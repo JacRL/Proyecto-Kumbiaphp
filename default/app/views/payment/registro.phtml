@@ -1,0 +1,30 @@
+<h1>PAYMENT RECORD: </h1>
+<?php View::content() ?>
+<center>
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">CUSTOMER ID:</label>
+        <input type="number" class="form-control"   name="payment[customer_id]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">STAFF ID:</label>
+        <input type="number" class="form-control"   name="payment[staff_id]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">RENTAL ID:</label>
+        <input type="number" class="form-control"   name="payment[rental_id]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">AMOUNT:</label>
+        <input type="number" class="form-control"   name="payment[amount]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">DATE:</label>
+        <input type="datetime" class="form-control"   name="payment[payment_date]">
+    </div>
+
+    <br><br>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+    <a><?php echo Html::linkAction('index', 'GO BACK', 'title="GO BACK" class="btn btn-primary" ') ?></a>
+</form>
+</center>

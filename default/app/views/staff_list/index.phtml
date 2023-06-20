@@ -1,0 +1,49 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>STAFF LIST:</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ADDRESS</th>
+            <th>ZIP CODE</th>
+            <th>PHONE</th>
+            <th>CITY</th>
+            <th>COUNTRY</th>
+            <th>SID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($stafflist as $st): ?>
+        <tr>
+            <td><?= $st->id ?></td>
+            <td><?= $st->name ?></td>
+            <td><?= $st->address ?></td>
+            <td><?= $st->zip_code ?></td>
+            <td><?= $st->phone ?></td>
+            <td><?= $st->city ?></td>
+            <td><?= $st->country ?></td>
+            <td><?= $st->SID ?></td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
+
+<a><?php echo Html::linkAction('nuevo', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+<a>  </a>
+<a><?php echo Html::linkAction('modificar', 'MODIFY', 'title="modificar" class="btn btn-primary" ') ?></a>
+</center>

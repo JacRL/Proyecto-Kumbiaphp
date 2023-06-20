@@ -1,0 +1,33 @@
+<h1>Lista de Consumidores</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Longitud</th>
+            <th>Clasificación</th>
+            <th>Actores</th>
+            <th>Actualizado</th>
+            <th>Creado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($filmlist as $fl): ?>
+        <tr>
+            <td><?= $fl->id ?></td>
+            <td><?= $fl->title ?></td>
+            <td><?= $fl->description ?></td>
+            <td><?= $fl->category ?></td>
+            <td><?= $fl->price ?></td>
+            <td><?= $fl->length ?></td>
+            <td><?= $fl->rating ?></td>
+            <td><?= $fl->actors ?></td>
+            <td><?= $fl->updated_id ?></td>
+            <td><?= $fl->created_at ?></td>
+        </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>

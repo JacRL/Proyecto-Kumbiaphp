@@ -1,0 +1,30 @@
+<h1>RENTAL RECORD: </h1>
+<?php View::content() ?>
+<center>
+<form class="form-group" method="post">
+    <div class="mb-3">
+        <label class="form-label">RENTAL DATE:</label>
+        <input type="date" class="form-control"   name="rental[rental_date]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">INVENTORY ID:</label>
+        <input type="number" class="form-control"   name="rental[inventory_id]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CUSTOMER ID:</label>
+        <input type="number" class="form-control"   name="rental[customer_id]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">RETURN DATE:</label>
+        <input type="date" class="form-control"   name="rental[return_date]">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">STAFF ID:</label>
+        <input type="number" class="form-control"   name="rental[staff_id]">
+    </div>
+
+    <br><br>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+    <a><?php echo Html::linkAction('index', 'GO BACK', 'title="GO BACK" class="btn btn-primary" ') ?></a>
+</form>
+</center>

@@ -1,0 +1,71 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+    }
+</style>
+<h1>CLIENTES / CUSTOMERS: </h1>
+<br>
+<a><?php echo Html::linkAction('registro', 'TO REGISTER', 'title="registro" class="btn btn-primary" ') ?></a>
+<?php View::content(); ?>
+<br>
+<center>
+    <table >
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th>STORE ID</th>
+            <th>NOMBRE (S) </th>
+            <th>EMAIL</th>
+            <th>ID DIRECCION</th>
+            <th>OPCIONES</th>
+            <!-- <th>ACTIVO</th>
+            <th>INFORMACION</th>
+            <th>LOCALIZACION</th> -->
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($customer as $cu):?>
+            <tr>
+                <td><?= $cu->id?></td>
+                <td><?= $cu->getStore()->nombre?></td>
+                <td><?= $cu->completeName()?></td>
+                <td><?= $cu->email?></td>
+                <td><?= $cu->getAddress()->address1.", ".$cu->getAddress()->postal_code.", ".$cu->getAddress()->district
+                    ?></td>
+                <td>
+                    <a><?php echo Html::linkAction("eliminar/$cu->id", 'Eliminar', 'title="Eliminar" class="btn btn-danger" ') ?></a>
+                    <a><?php echo Html::linkAction("modificar/$cu->id", 'Editar', 'title="Editar" class="btn btn-primary" ') ?></a>
+                    <a><?php echo Html::linkAction("ver/$cu->id", 'Detalles', 'title="Editar" class="btn btn-primary" ') ?></a>
+    
+                </td>
+                <!--<td><?= $cu->active?></td>
+                 <td><?= $cu->informacion?></td>
+                <td><?= $cu->create_date?></td> -->
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="7" align="center">
+                <center>
+
+                </center>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    <br><br>
+    <a><?php echo Html::linkAction('registro', 'Registrar', 'title="registro" class="btn btn-primary" ') ?></a>
+    <a><?php echo Html::linkAction('modificar', 'Modificar', 'title="modificar" class="btn btn-primary" ') ?></a>
+            
+</center>
